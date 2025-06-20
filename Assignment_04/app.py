@@ -88,7 +88,7 @@ def predict(img):
 # Gradio Interface
 demo = gr.Interface(
     fn=predict,
-    inputs=gr.Image(shape=(28, 28), image_mode="L", invert_colors=True, sources=["upload", "canvas"]),
+    inputs=gr.Image(),
     outputs="text",
     title="MNIST Digit Classifier (6x6 CNN)",
     description="Upload or draw a digit to classify it using a lightweight CNN trained on MNIST resized to 8×8."
